@@ -105,7 +105,10 @@ return packer.startup(function(use)
     run = ":UpdateRemotePlugins"
   }
   --Jukit
-  use "luk400/vim-jukit"
+  use "luk400/vim-jukit" -- ipython notebooks
+
+  --Dir Diff
+  use "will133/vim-dirdiff" 
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

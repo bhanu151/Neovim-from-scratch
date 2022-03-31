@@ -17,4 +17,4 @@ keymap("n", "<leader>ks", "<cmd>GkeepSortChecked<cr>", opts)
 keymap("n", "<leader>kl", "<cmd>GkeepClearChecked<cr>", opts)
 
 -- Configuration --
-vim.g.gkeep_sync_dir = '~/work/notes'
+vim.g.gkeep_sync_dir = '~/work/gkeep'
