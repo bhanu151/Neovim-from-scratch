@@ -70,8 +70,8 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Telescope --
 keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
-keymap("n", "<C-t>", "<cmd>Telescope live_grep<cr>", opts)
-keymap("n", "<C-m>", "<cmd>Telescope media_files<cr>", opts)
+keymap("n", "<leader>g", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>m", "<cmd>Telescope media_files<cr>", opts)
 
 -- Gitsigns --
 keymap("n", "<C-g>", "<cmd>Gitsigns preview_hunk<cr>", opts)
