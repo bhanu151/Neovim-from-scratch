@@ -47,3 +47,10 @@ vim.cmd [[set diffopt+=vertical]]          -- diffsplit vertically
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 
 vim.g.python3_host_prog = '/usr/bin/python3'
+
+-- Jukit
+vim.g.jukit_terminal = "kitty"
+vim.g.jukit_savefig_dpi = 150
+vim.g.jukit_inline_plotting = 1
+vim.g.jukit_mpl_style = "/home/bhanu/.local/share/nvim/site/pack/packer/start/vim-jukit/helpers/matplotlib-backend-kitty/backend.mplstyle"
+vim.g.jukit_pdf_viewer = "xdg-open"
