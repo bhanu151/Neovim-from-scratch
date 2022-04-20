@@ -81,3 +81,6 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 -- NullLs --
 keymap("n", "<leader>lf", ":Format<cr>", opts)
+
+-- Twilight --
+keymap("n", "<leader>tw", ":Twilight<cr>", opts)

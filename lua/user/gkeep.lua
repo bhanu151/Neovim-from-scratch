@@ -18,3 +18,4 @@ keymap("n", "<leader>kl", "<cmd>GkeepClearChecked<cr>", opts)
 
 -- Configuration --
 vim.g.gkeep_sync_dir = '~/work/gkeep'
+vim.g.gkeep_sync_archived = true
