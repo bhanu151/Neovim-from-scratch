@@ -63,9 +63,14 @@ return packer.startup(function(use)
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
   use "folke/tokyonight.nvim"
-  use "folke/twilight.nvim"
   use "ellisonleao/gruvbox.nvim"
   use "EdenEast/nightfox.nvim"
+
+  -- Visibility
+  use "folke/twilight.nvim"
+
+  -- Navigation
+  use 'ggandor/lightspeed.nvim'
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -106,10 +111,11 @@ return packer.startup(function(use)
     "stevearc/gkeep.nvim",
     run = ":UpdateRemotePlugins"
   }
-  --Jukit
+
+  -- Jukit
   use "luk400/vim-jukit" -- ipython notebooks
 
-  --Dir Diff
+  -- Dir Diff
   use "will133/vim-dirdiff"
 
   -- Automatically set up your configuration after cloning packer.nvim
