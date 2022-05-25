@@ -106,11 +106,15 @@ return packer.startup(function(use)
   -- Git
   use "lewis6991/gitsigns.nvim"
 
+  --Notes
   -- Google Keep
   use {
     "stevearc/gkeep.nvim",
     run = ":UpdateRemotePlugins"
   }
+
+  -- Vimwiki
+  use "vimwiki/vimwiki"
 
   -- Jukit
   use "luk400/vim-jukit" -- ipython notebooks
