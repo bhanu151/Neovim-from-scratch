@@ -12,27 +12,6 @@ end
 
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
-vim.g.nvim_tree_icons = {
-  default = "",
-  symlink = "",
-  git = {
-    unstaged = "",
-    staged = "S",
-    unmerged = "",
-    renamed = "➜",
-    deleted = "",
-    untracked = "U",
-    ignored = "◌",
-  },
-  folder = {
-    default = "",
-    open = "",
-    empty = "",
-    empty_open = "",
-    symlink = "",
-  },
-}
-
 local nvim_tree_options = {
   nvim_tree_git_hl = 1,
   root_folder_modifier = ":t",
@@ -51,6 +30,30 @@ for k, v in pairs(nvim_tree_options) do
 end
 
 nvim_tree.setup {
+  renderer = {
+    icons = {
+      glyphs ={
+        default = "",
+        symlink = "",
+        git = {
+          unstaged = "",
+          staged = "S",
+          unmerged = "",
+          renamed = "➜",
+          deleted = "",
+          untracked = "U",
+          ignored = "◌",
+        },
+        folder = {
+          default = "",
+          open = "",
+          empty = "",
+          empty_open = "",
+          symlink = "",
+        },
+      },
+    },
+  },
   disable_netrw = true,
   hijack_netrw = true,
   open_on_setup = false,

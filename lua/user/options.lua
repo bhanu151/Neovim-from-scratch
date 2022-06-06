@@ -54,3 +54,13 @@ vim.g.jukit_savefig_dpi = 150
 vim.g.jukit_inline_plotting = 1
 vim.g.jukit_mpl_style = "/home/bhanu/.local/share/nvim/site/pack/packer/start/vim-jukit/helpers/matplotlib-backend-kitty/backend.mplstyle"
 vim.g.jukit_pdf_viewer = "xdg-open"
+
+-- Vimwiki
+vim.g.vimwiki_list = {
+  {
+    path = '~/vimwiki',
+    syntax = 'markdown',
+    ext = '.md',
+    diary_frequency = 'monthly',
+  }
+}
