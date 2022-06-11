@@ -129,6 +129,13 @@ return packer.startup(function(use)
   -- Dir Diff
   use "will133/vim-dirdiff"
 
+  -- DAP
+  use "mfussenegger/nvim-dap" -- dap client
+  use "mfussenegger/nvim-dap-python" -- python debug adapter
+  use "theHamsta/nvim-dap-virtual-text" -- Virtual text support for nvim-dap
+  use "rcarriga/nvim-dap-ui" -- UI for nvim dap
+  -- use "Pocco81/DAPInstall.nvim" -- 
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
