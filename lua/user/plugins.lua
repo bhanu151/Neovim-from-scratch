@@ -135,6 +135,12 @@ return packer.startup(function(use)
   use "theHamsta/nvim-dap-virtual-text" -- Virtual text support for nvim-dap
   use "rcarriga/nvim-dap-ui" -- UI for nvim dap
   -- use "Pocco81/DAPInstall.nvim" -- 
+  
+  -- Docstrings
+  use {
+    "danymat/neogen",
+    requires = "nvim-treesitter/nvim-treesitter",
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

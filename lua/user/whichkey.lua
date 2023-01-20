@@ -167,6 +167,12 @@ local mappings = {
     },
   },
 
+  n = {
+    name = "Neogen",
+    c = { "<cmd>lua require('neogen').generate({type = 'class'})<cr>", "Class docstring" },
+    f = { "<cmd>lua require('neogen').generate()<cr>", "Function docstring" },
+  },
+
   p = {
     name = "Packer",
     c = { "<cmd>PackerCompile<cr>", "Compile" },
