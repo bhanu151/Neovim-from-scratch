@@ -64,3 +64,9 @@ vim.g.vimwiki_list = {
     diary_frequency = 'monthly',
   }
 }
+
+-- Vim-header
+vim.g.header_field_author = 'Bhanu Priya S'
+vim.g.header_field_author_email = 'bhanups@ncbs.res.in'
+vim.g.header_auto_add_header = 0
+vim.g.header_auto_update_header = 1

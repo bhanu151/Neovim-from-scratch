@@ -125,6 +125,13 @@ local mappings = {
     },
   },
 
+  h = {
+    name = "Docstrings-headers ",
+    a = { "<cmd>AddHeader<cr>", "Add header"},
+    c = { "<cmd>lua require('neogen').generate({type = 'class'})<cr>", "Class docstring" },
+    f = { "<cmd>lua require('neogen').generate()<cr>", "Function docstring" },
+  },
+
   k = {
     name = "Gkeep",
     t = { "<cmd>GkeepToggle<cr>", "Toggle Gkeep" },
@@ -165,12 +172,6 @@ local mappings = {
       "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
       "Workspace Symbols",
     },
-  },
-
-  n = {
-    name = "Neogen",
-    c = { "<cmd>lua require('neogen').generate({type = 'class'})<cr>", "Class docstring" },
-    f = { "<cmd>lua require('neogen').generate()<cr>", "Function docstring" },
   },
 
   p = {
