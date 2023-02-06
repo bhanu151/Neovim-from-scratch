@@ -46,7 +46,7 @@ local setup = {
     align = "left", -- align columns left, center or right
   },
   ignore_missing = true, -- enable this to hide mappings for which you didn't specify a label
-  hidden = { "<silent>", "<cmd>", "<Cmd>", "<CR>", "call", "lua", "^:", "^ " }, -- hide mapping boilerplate
+  hidden = { "<silent>", "<cmd>", "<Cmd>", "<cr>", "call", "lua", "^:", "^ " }, -- hide mapping boilerplate
   show_help = true, -- show help message on the command line when the popup is visible
   triggers = "auto", -- automatically setup triggers
   triggers_blacklist = {
@@ -69,10 +69,10 @@ local opts = {
 
 local mappings = {
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-  ["w"] = { "<cmd>w!<CR>", "Save" },
-  ["q"] = { "<cmd>q!<CR>", "Quit" },
-  -- ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
-  ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
+  ["w"] = { "<cmd>w!<cr>", "Save" },
+  ["q"] = { "<cmd>q!<cr>", "Quit" },
+  -- ["c"] = { "<cmd>Bdelete!<cr>", "Close Buffer" },
+  ["n"] = { "<cmd>nohlsearch<cr>", "No Highlight" },
 
   --DAP
   ["<F1>"] = { "<cmd>lua require'dap'.step_back()<cr>", "Step Back" },
@@ -104,7 +104,7 @@ local mappings = {
 
   g = {
     name = "Git",
-    g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
+    g = { "<cmd>lua _LAZYGIT_TOGGLE()<cr>", "Lazygit" },
     j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
     k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
     l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
@@ -144,34 +144,16 @@ local mappings = {
 
   l = {
     name = "LSP",
-    a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
-    d = {
-      "<cmd>Telescope lsp_document_diagnostics<cr>",
-      "Document Diagnostics",
-    },
-    w = {
-      "<cmd>Telescope lsp_workspace_diagnostics<cr>",
-      "Workspace Diagnostics",
-    },
-    f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
-    i = { "<cmd>LspInfo<cr>", "Info" },
-    I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
-    j = {
-      "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
-      "Next Diagnostic",
-    },
-    k = {
-      "<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>",
-      "Prev Diagnostic",
-    },
-    l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
-    q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
-    r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
-    s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
-    S = {
-      "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
-      "Workspace Symbols",
-    },
+    a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code action" },
+    D = { "<cmd>lua vim.lsp.buf.declaration()<cr>", "Goto declaration"},
+    d = { "<cmd>lua vim.lsp.buf.definition()<cr>", "Goto definition"},
+    f = { "<cmd>lua vim.lsp.buf.format()<cr>", "Format"},
+    h = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Hover"},
+    i = { "<cmd>lua vim.lsp.buf.implementation()<cr>", "Goto implementation"},
+    j = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", "Prev diagnostic"},
+    k = { "<cmd>lua vim.diagnostic.goto_next()<cr>", "Next diagnostic"},
+    o = { "<cmd>lua vim.diagnostic.open_float()<cr>", "Open diagnostic"},
+    s = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "Signature help"},
   },
 
   p = {
