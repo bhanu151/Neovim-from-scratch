@@ -124,7 +124,7 @@ return packer.startup(function(use)
   use "mattn/calendar-vim"
 
   -- Jukit
-  use "luk400/vim-jukit" -- ipython notebooks
+  --[[ use "luk400/vim-jukit" -- ipython notebooks ]]
 
   -- Dir Diff
   use "will133/vim-dirdiff"
