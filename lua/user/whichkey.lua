@@ -156,6 +156,13 @@ local mappings = {
     s = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "Signature help"},
   },
 
+  m = {
+    name = "Sessions",
+    s = { "<cmd>SessionManager save_current_session<CR>", "save" },
+    d = { "<cmd>SessionManager delete_session<CR>", "delete" },
+    l = { "<cmd>SessionManager load_session<CR>", "load" },
+  },
+
   p = {
     name = "Packer",
     c = { "<cmd>PackerCompile<cr>", "Compile" },
