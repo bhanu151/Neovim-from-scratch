@@ -154,4 +154,6 @@ return packer.startup(function(use)
   -- Sessions
   use "Shatur/neovim-session-manager"
 
+  -- LaTeX
+  use "lervag/vimtex"
 end)
