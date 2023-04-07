@@ -94,12 +94,13 @@ local mappings = {
 
   f = {
     name= "Find",
+    c = { "<cmd>Telescope bibtex<cr>", "citations" },
     f = {
     "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Find files",
     },
     g = { "<cmd>Telescope live_grep<cr>", "Grep Text" },
-    m = {"<cmd>Telescope media_files<cr>", "Preview Media Files"},
+    m = { "<cmd>Telescope media_files<cr>", "Preview Media Files" },
   },
 
   g = {

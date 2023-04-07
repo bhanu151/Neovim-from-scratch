@@ -95,6 +95,15 @@ return packer.startup(function(use)
   -- Telescope
   use "nvim-telescope/telescope.nvim"
   use "nvim-telescope/telescope-media-files.nvim"
+  use { 
+    "nvim-telescope/telescope-bibtex.nvim",
+    requires = {
+      {'nvim-telescope/telescope.nvim'},
+    },
+    config = function ()
+      require"telescope".load_extension("bibtex")
+    end,
+  }
 
   -- Treesitter
   use {
