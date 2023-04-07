@@ -81,6 +81,7 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
   use "f3fora/cmp-spell" -- Spelling completion
+  use "kdheepak/cmp-latex-symbols" -- latex symbols
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine

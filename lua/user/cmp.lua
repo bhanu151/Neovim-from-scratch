@@ -107,6 +107,7 @@ cmp.setup {
         buffer = "[Buffer]",
         path = "[Path]",
         spell = "[Spell]",
+        latex_symbols = "[Symbol]"
       })[entry.source.name]
       return vim_item
     end,
@@ -116,8 +117,15 @@ cmp.setup {
     { name = "nvim_lua" },
     { name = "luasnip" },
     { name = "buffer" },
-    { name = "path" },
     { name = "spell" },
+    { name = "latex_symbols",
+      filetype = { "tex", "latex", "md" },
+      option = { 
+        strategy = 2, -- show and insert the symbol
+        cache = true, -- avoids reloading each time
+      }, 
+    },
+    { name = "path" },
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
