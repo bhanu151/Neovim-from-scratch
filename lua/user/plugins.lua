@@ -70,7 +70,7 @@ return packer.startup(function(use)
   use "folke/twilight.nvim"
 
   -- Navigation
-  use 'ggandor/lightspeed.nvim'
+  use 'ggandor/leap.nvim'
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
