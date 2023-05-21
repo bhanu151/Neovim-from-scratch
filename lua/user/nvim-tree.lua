@@ -29,10 +29,27 @@ for k, v in pairs(nvim_tree_options) do
   vim.g.k = v
 end
 
+local function on_attach(bufnr)
+  local api = require("nvim-tree.api")
+  local function opts(desc)
+    return {
+      desc = "nvim-tree: " .. desc,
+      buffer = bufnr,
+      noremap = true,
+      silent = true,
+      nowait = true,
+    }
+  end
+  vim.keymap.set("n", "l", api.node.open.edit, opts("Open"))
+  vim.keymap.set("n", "v", api.node.open.vertical, opts("Open: Vertical Split"))
+  vim.keymap.set("n", "h", api.node.navigate.parent_close, opts("Close Directory"))
+end
+
 nvim_tree.setup {
+  on_attach = on_attach,
   renderer = {
     icons = {
-      glyphs ={
+      glyphs = {
         default = "",
         symlink = "",
         git = {
@@ -92,11 +109,6 @@ nvim_tree.setup {
     side = "right",
     mappings = {
       custom_only = false,
-      list = {
-        { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
-        { key = "h", cb = tree_cb "close_node" },
-        { key = "v", cb = tree_cb "vsplit" },
-      },
     },
     number = false,
     relativenumber = false,
