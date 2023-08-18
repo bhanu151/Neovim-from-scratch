@@ -166,4 +166,7 @@ return packer.startup(function(use)
 
   -- LaTeX
   use "lervag/vimtex"
+
+  -- Autosave
+  use "Pocco81/auto-save.nvim"
 end)

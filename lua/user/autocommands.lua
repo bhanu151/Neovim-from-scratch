@@ -18,6 +18,7 @@ vim.cmd [[
     autocmd!
     autocmd FileType markdown setlocal wrap
     autocmd FileType markdown setlocal spell
+    autocmd FileType markdown :ASToggle
   augroup end
 
   augroup _tex
@@ -25,6 +26,7 @@ vim.cmd [[
     autocmd FileType tex setlocal wrap
     autocmd FileType tex setlocal spell
     autocmd FileType tex :Twilight
+    autocmd FileType tex :ASToggle
   augroup end
   "
   " augroup _auto_resize
